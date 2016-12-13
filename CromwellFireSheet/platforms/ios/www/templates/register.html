@@ -1,0 +1,63 @@
+<ion-view title="Choose" id="page1" style="background-color:#313942;" class=" ">
+  <ion-content padding="true" class="has-header">
+    <div class="row">
+      <div class="col text-center">
+        <div class="logo-main">
+          <img src="img/logo.png" width="100%">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center text-blue">
+        SIGN UP NOW
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="list list-inset list-input-custom">
+          <label class="item item-input item-input-custom">
+            <i class="icon ion-person placeholder-icon"></i>
+            <input ng-model="user.name" type="text" placeholder="NAME" class="input-field">
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="list list-inset list-input-custom">
+          <label class="item item-input item-input-custom">
+            <i class="icon ion-person placeholder-icon"></i>
+            <input autocapitalize="off" ng-model="user.email" type="text" placeholder="EMAIL" class="input-field">
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="list list-inset list-input-custom">
+          <label class="item item-input item-input-custom">
+            <i class="icon ion-key placeholder-icon"></i>
+            <input ng-model="user.password" type="password" placeholder="PASSWORD" class="input-field">
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col" style="margin-top:9px !important;">
+        <button ng-click="doRegister()" class="button button-full btn-login js-btn-register">
+          REGISTER
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-white" style="">
+        Have an account?
+      </div>
+      <div class="col">
+        <a ng-click="login()" class="text-blue text-decoration-none btn-padding">
+          Login
+        </a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

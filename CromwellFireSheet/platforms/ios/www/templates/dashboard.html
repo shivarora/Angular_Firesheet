@@ -1,0 +1,64 @@
+<ion-view title="Dashboard" id="page1" style="background-color:#ffffff;" class=" ">
+  <ion-nav-buttons side="secondary" class="btn">
+    <a href="#" class="btn-logout" ng-click="logout()">
+      <i class="fa fa-power-off" aria-hidden="true"></i>
+    </a>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+    <span ng-if="products.length === 0">
+      <div class="row">
+        <br/><br/>
+        <div class="col text-center">
+          <img src="img/empty.gif" width="100%">
+          <h4>Lets Start Saving!</h4>
+          <p>Click the add + button to get started</p>
+        </div>
+      </div>
+    </span>
+    <span ng-if="products.length !== 0">
+      <ion-refresher
+        pulling-text="Pull to refresh..."
+        on-refresh="doRefresh()">
+      </ion-refresher>
+      <ion-list show-delete="false" can-swipe="true" ng-repeat="product in products">
+        <ion-item ng-click="fullDetails(product._id)">
+          <div class="row">
+            <div class="col-20">
+              <span ng-if="product.image">
+                <img src="{{ product.image }}" style="width:30px; overflow: hidden;">
+              </span>
+              <span ng-if="!product.image">
+                <img src="http://www.gkpower.com.au/wp-content/uploads/2013/03/newproducts-icon.png" style="width:50px; overflow: hidden; border-radius: 4px">
+              </span>
+            </div>
+            <div class="col-50 product-details">
+              <span ng-if="product.name">
+                <h5>{{ product.name }}</h5>
+              </span>
+              <span ng-if="!product.name">
+                <p>Updating...</p>
+              </span>
+              <p>{{ product.domain }}</p>
+            </div>
+            <div ng-if="product.price == 0" class="col-20 text-right">
+              <div  class="updating">
+                Updating
+              </div>
+            </div>
+            <div ng-if="product.price != 0" class="col-20 text-right">
+              <p>&pound;{{(product.price / 100).toFixed(2) }} </p>
+            </div>
+          </div>
+          <ion-option-button ng-click="report(product._id)" class="btn-edit btn-warning icon ion-alert-circled"></ion-option-button>
+          <ion-option-button ng-click="openBrowser(product.url)" class="btn-edit icon ion-eye"></ion-option-button>
+          <ion-option-button ng-click="delete(product._id)" class="button-assertive btn-delete icon ion-trash-a"></ion-option-button>
+        </ion-item>
+      </ion-list>
+    </span>
+  </ion-content>
+</ion-view>
+<a id="js-create-new" class="js-create-new" href="#" ng-click="createNew()">
+  <div class="btn btn-add" style="display: none">
+    <i class="fa fa-plus" aria-hidden="true"></i>
+  </div>
+</a>

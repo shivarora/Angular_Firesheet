@@ -1,0 +1,11 @@
+{
+  "name": "cromwell_design",
+  "app_id": "",
+    "proxies": [
+        {
+          "path": "/staffDetail",
+          "proxyUrl": "https://reception.cromwell-tools.co.uk/allStaff",
+          "rejectUnauthorized":false
+        }
+    ]
+}

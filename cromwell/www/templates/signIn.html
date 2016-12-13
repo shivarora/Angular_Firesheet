@@ -1,0 +1,23 @@
+<ion-view title="Sign In" id="signIn" class=" ">
+    <ion-content padding="true" class="has-header">
+        <form id="login-form2" class="list " ng-submit="doSignIn()">
+            <ion-list id="signIn-list1" class=" ">
+
+                <label class="item item-input " id="signIn-input1">
+                    <input type="text" placeholder="Your Name" ng-model="signInData.username">
+                </label>
+              <label class="item item-input " id="signIn-input2">
+                <input type="text" placeholder="Company" ng-model="signInData.companyname">
+              </label>
+                <label class="item item-input " id="signIn-input3">
+                    <input type="text" placeholder="Visiting" ng-model="signInData.visitingname">
+                </label>
+                <label class="item item-input " id="signIn-input4">
+                    <input type="text" placeholder="Vehicle Reg" ng-model="signInData.vehiclereg">
+                </label>
+            </ion-list>
+            <div class="spacer" style="height: 40px;"></div>
+            <button id="signIn-button5" class=" button button-stable  button-block " type="submit">Log in</button>
+        </form>
+    </ion-content>
+</ion-view>

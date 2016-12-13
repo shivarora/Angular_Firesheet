@@ -1,0 +1,13 @@
+
+.button.button-main-signout {
+  border: 1px solid;
+  background-color: black;
+}
+
+.button.button-main-signin {
+  border: 1px solid;
+  background-color: white;
+}
+
+.slider { height: 100%; text-align: center }
+.scroll { height: 100% }

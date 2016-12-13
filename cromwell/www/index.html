@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+<script src="lib/ionic-platform-web-client/dist/ionic.io.bundle.min.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <!-- Cordova is bootstrapped by ionic-platform-web-client, uncomment this if you remove ionic-platform-web-client... -->
+<!-- <script src="cordova.js"></script> -->
+
+    <!-- compiled css output -->
+    <link href="css/ionic.app.css" rel="stylesheet">
+
+
+    <link href="css/ionic.app.css" rel="stylesheet">
+
+
+    <style type="text/css">
+      .platform-ios .manual-ios-statusbar-padding{
+        padding-top:20px;
+      }
+      .manual-remove-top-padding{
+        padding-top:0px;
+      }
+      .manual-remove-top-padding .scroll{
+        padding-top:0px !important;
+      }
+      ion-list.manual-list-fullwidth div.list, .list.card.manual-card-fullwidth {
+        margin-left:-10px;
+        margin-right:-10px;
+      }
+      ion-list.manual-list-fullwidth div.list > .item, .list.card.manual-card-fullwidth > .item {
+        border-radius:0px;
+        border-left:0px;
+        border-right: 0px;
+      }
+    </style>
+
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/routes.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/directives.js"></script>
+
+    <!-- Only required for Tab projects w/ pages in multiple tabs
+    <script src="lib/ionicuirouter/ionicUIRouter.js"></script>
+    -->
+
+  </head>
+  <body ng-app="starter">
+  <ion-pane>
+    <ion-header-bar class="bar-stable">
+      <h1 class="title">Information App</h1>
+    </ion-header-bar>
+    <ion-tabs class="tabs-positive tabs-icon-only">
+      <ion-tab title="Home" icon-on="ion-ios7-filing" icon-off="ion-ios7-filing-outline">
+        <ion-content>
+          <ion-slide-box ng-controller="ExampleController" pager-click="navSlide(index)" auto-play="true" does-continue="true">
+            <ion-slide>
+              <img style="width: 100%" src="http://upload.wikimedia.org/wikipedia/commons/7/79/2001_BMW_Z3_Sideview_Topdown_Topaz_Blue_2.5i.jpg">
+            </ion-slide>
+            <ion-slide>
+              <img style="width: 100%" src="http://upload.wikimedia.org/wikipedia/commons/2/2e/BMW_Z3_1.9L_1998.jpg">
+            </ion-slide>
+            <ion-slide>
+              <img style="width: 100%" src="http://www.bmwblog.com/wp-content/uploads/bmw-z3-black.jpg">
+            </ion-slide>
+          </ion-slide-box>
+        </ion-content>
+      </ion-tab>
+
+      <ion-tab title="About" icon-on="ion-ios7-clock" icon-off="ion-ios7-clock-outline">
+        <ion-content>
+          <ion-slide-box ng-controller="ExampleController" pager-click="navSlide(index)" auto-play="true" does-continue="true">
+            <ion-slide>
+              <img style="width: 100%" src="http://autorentic.net/wp-content/uploads/2014/10/bmw-z3-interior-wallpaper-bmw-z3-32-pictures.jpg">
+            </ion-slide>
+            <ion-slide>
+              <img style="width: 100%" src="http://images.gtcarlot.com/pictures/54715743.jpg">
+            </ion-slide>
+            <ion-slide>
+              <img style="width: 100%" src="http://jonsibal.com/blog/wp-content/gallery/mroadster/mroadster_11.jpg">
+            </ion-slide>
+          </ion-slide-box>
+        </ion-content>
+      </ion-tab>
+
+      <ion-tab title="Settings" icon-on="ion-ios7-information" icon-off="ion-ios7-information-outline">
+        <ion-content>
+          <div class="card">
+            <div class="item item-divider">
+              Some title here
+            </div>
+            <div class="item item-text-wrap">
+              <img style="width: 100%" src="https://maps.googleapis.com/maps/api/staticmap?center=-15.800513,-47.91378&amp;zoom=11&amp;size=600x300">
+            </div>
+            <div class="item tabs tabs-secondary tabs-icon-left">
+              <a class="tab-item" href="#">
+                <i class="icon ion-ios7-telephone"></i>
+                Call
+              </a>
+              <a class="tab-item" href="#">
+                <i class="icon ion-ios7-email"></i>
+                Email
+              </a>
+              <a class="tab-item" href="#">
+                <i class="icon ion-share"></i>
+                Share
+              </a>
+            </div>
+          </div>
+        </ion-content>
+      </ion-tab>
+    </ion-tabs>
+  </ion-pane>
+  </body>
+  <!--<body ng-app="app" animation="slide-left-right-ios7">-->
+  <!--<div>-->
+    <!--<ion-side-menus enable-menu-with-back-views="false" data-componentid="side-menu21">-->
+        <!--<ion-side-menu-content>-->
+            <!--<ion-nav-bar class="bar-stable">-->
+                <!--<ion-nav-back-button></ion-nav-back-button>-->
+                <!--<ion-nav-buttons side="right">-->
+                  <!--<img src="img/tZXQ2SUxTZmgd5sHp3vq_cromwell_logo.png" width="20%" height="30px" style="display: block;margin-left: auto;">-->
+                <!--</ion-nav-buttons>-->
+            <!--</ion-nav-bar>-->
+            <!--<ion-nav-view></ion-nav-view>-->
+        <!--</ion-side-menu-content>-->
+        <!--<ion-side-menu side="left" id="side-menu21">-->
+            <!--<ion-header-bar class="bar-stable">-->
+                <!--<div class="title">Menu</div>-->
+            <!--</ion-header-bar>-->
+            <!--<ion-content padding="false" class="side-menu-left has-header"></ion-content>-->
+        <!--</ion-side-menu>-->
+    <!--</ion-side-menus>-->
+
+    <ion-slide-box>
+      <ion-slide>
+        <img style="width: 100%" src="http://upload.wikimedia.org/wikipedia/commons/7/79/2001_BMW_Z3_Sideview_Topdown_Topaz_Blue_2.5i.jpg">
+      </ion-slide>
+      <ion-slide>
+        <img style="width: 100%" src="http://upload.wikimedia.org/wikipedia/commons/2/2e/BMW_Z3_1.9L_1998.jpg">
+      </ion-slide>
+      <ion-slide>
+        <img style="width: 100%" src="http://www.bmwblog.com/wp-content/uploads/bmw-z3-black.jpg">
+      </ion-slide>
+    </ion-slide-box>
+
+    <ion-tabs class="tabs-positive tabs-icon-only">
+      <ion-tab title="Home" icon-on="ion-ios7-filing" icon-off="ion-ios7-filing-outline">
+        <ion-content>
+        </ion-content>
+      </ion-tab>
+
+      <ion-tab title="About" icon-on="ion-ios7-clock" icon-off="ion-ios7-clock-outline">
+        <ion-content>
+        </ion-content>
+      </ion-tab>
+
+      <ion-tab title="Settings" icon-on="ion-ios7-information" icon-off="ion-ios7-information-outline">
+        <ion-content>
+        </ion-content>
+      </ion-tab>
+    </ion-tabs>
+
+
+    <ion-slide-box ng-controller="ExampleController" pager-click="navSlide(index)" auto-play="true" does-continue="true">
+
+  <!--</div>-->
+  
+</ion-slide-box></html>
